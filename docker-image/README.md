@@ -8,6 +8,16 @@ Docker Image is an executable package of software that includes everything neede
 
 > docker image pull nginx:latest
 
+> docker run --name ihz-nginx -d -p 8080:80 nginx
+
+> docker image history ## Show history of an image
+
+> docker image rm ## Remove images
+
+> docker image prune ## Prune – remove unused images
+
+> docker build ## Build an Image from Dockerfile
+
 ### Docker Document References
 
 Docker Image Commandline: https://docs.docker.com/engine/reference/commandline/image/  
