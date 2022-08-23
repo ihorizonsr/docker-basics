@@ -13,9 +13,10 @@ Docker Image is an executable package of software that includes everything neede
 > ##### Run an Image 
 >     docker run --name ihz-nginx -d -p 8080:80 nginx
 >
-> - The ***docker run*** command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
-> - ***-d*** Image will run in detach mode [Docker container runs in the background of your terminal]
-> - ***-p*** expose port 80 [access internally] to host or outside with 8080 [access exterally]
+> - ***docker run***: The command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
+> - ***-d***: Run image in detach mode i.e. Docker container runs in the background of the terminal.
+> - ***-p***: Expose port 80 [access internally] to host or outside with 8080 [access exterally]
+> - ***--name***: Assign a name to the container
 
 > ##### Show history of an image
 >     docker image history
