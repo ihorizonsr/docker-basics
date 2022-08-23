@@ -13,8 +13,6 @@ Docker Container is a standardized unit which can be created on the fly to deplo
 They are exactly the same. Prior to docker 1.13 the docker run command was only available. The CLI commands were then refactored to have the form docker COMMAND SUBCOMMAND, wherein this case the COMMAND is container and the SUBCOMMAND is run. This was done to have a more intuitive grouping of commands since the number of commands at the time has grown substantially.
 
 ### Run an Image in a container and rename the container
->     docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-
 >     docker run -d --name ihz-linux alpine watch "date >> /var/log/date.log"
 
 >     docker rename ihz-linux alpine-linux
@@ -30,24 +28,15 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 >     docker exec --workdir /tmp alpine-linux pwd
 
 ### Start or Stop container
->     docker container stop 
+>     docker container stop alpine-linux 
 
->     docker container start
+>     docker container start alpine-linux
 
-> ##### Remove container
->     docker image rm [OPTIONS] IMAGE [IMAGE...]
->     docker rmi [OPTIONS] IMAGE [IMAGE...]
->
->     docker image rm nginx
->     docker rmi nginx
+### Remove container
+>     docker rm alpine-linux
 
-> ##### Prune – remove unused container
->     docker image prune 
-
-> ##### Build an Image from Dockerfile
->     docker build [OPTIONS] PATH | URL | -
->
->     docker build .
+> ##### Prune – remove all stopped containers
+>     docker container prune 
 
 ## Docker Document References:
 > -   <https://docs.docker.com/engine/reference/commandline/container/>
