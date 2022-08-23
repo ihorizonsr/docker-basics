@@ -23,9 +23,13 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 ### Running Commands in an Alternate Directory in a Docker Container
 -     docker exec --workdir /tmp alpine-linux pwd
 
-### Start or Stop container
--     docker container stop alpine-linux 
+### Start or Stop or Restart container
+> Stop one or more running containers
+-     docker container stop alpine-linux
+> Start one or more stopped containers
 -     docker container start alpine-linux
+> Restart one or more containers
+-     docker container restart alpine-linux
 
 ### Remove container
 -     docker rm alpine-linux
