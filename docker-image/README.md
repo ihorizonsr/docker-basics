@@ -19,10 +19,12 @@ Docker Image is an executable package of software that includes everything neede
 > - ***--name***: Assign a name to the container
 
 > ##### Show history of an image
->     docker image history
+>     docker image history [OPTIONS] IMAGE
+>     docker image history nginx
 
 > ##### Remove images
->     docker image rm
+>     docker image rm [OPTIONS] IMAGE [IMAGE...] 
+>     docker image rm nginx
 
 > ##### Prune – remove unused images
 >     docker image prune 
