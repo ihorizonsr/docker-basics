@@ -29,6 +29,6 @@ Docker Image is an executable package of software that includes everything neede
 > ##### Build an Image from Dockerfile
 >     docker build 
 
-> ## Docker Document References
+## Docker Document References
 > -   <https://docs.docker.com/engine/reference/commandline/image/>
 > -   <https://docs.docker.com/engine/reference/commandline/images/>
