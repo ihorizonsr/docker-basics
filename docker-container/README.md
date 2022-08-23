@@ -6,7 +6,7 @@ Docker Container is a standardized unit which can be created on the fly to deplo
 
 > ##### List containers
 >     docker container ls
-
+>
 >     docker ps -a
 
 > ##### Difference between docker run and docker container run
