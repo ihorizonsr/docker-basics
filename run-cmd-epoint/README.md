@@ -1,4 +1,4 @@
-# Docker RUN - CMD - Entrypoint
+# Docker RUN - CMD - ENTRYPOINT
 
 ### RUN
 The **docker run** command is used to run or start a command in a new container which means it creates a writeable layer on top of the mentioned image in the command. That’s why we call a container is a writeable image. This is the first command that we run when start learning Docker. There are a lot of options available with this command to configure the container as per our requirement like running a container in detached mode or interactive mode, specifying a name to the container, attaching network, volume, etc., exposing port to access the containers’ application externally, and many more things.
@@ -14,7 +14,7 @@ Docker CMD defines the default executable of a Docker image. You can run this im
 The CMD instruction is only utilized if there is no argument added to the run command when starting a container. Therefore, if you add an argument to the command, you override the CMD.
 
 
-### Entrypoint
+### ENTRYPOINT
 
 ENTRYPOINT is the other instruction used to configure how the container will run. Just like with CMD, we need to specify a command and parameters.
 
