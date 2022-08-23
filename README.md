@@ -8,9 +8,9 @@ Docker is the leading open-source container service provider that has ruled the 
 
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
-> **Virtualization** − Virtualization is the technology that can simulate your physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
+> **Virtualization** − Virtualization is the technology that can simulate the physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
 
-> **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of your machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
+> **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of the machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
 
 ### Difference between Virtualization and Containerization
 The following table compares and contrasts the different features of Virtualization and Containerization 
@@ -41,28 +41,28 @@ The Docker host provides a complete environment to execute and run applications.
 > #### Images
 > Images are nothing but a read-only binary template that can build containers. They also contain metadata that describe the container’s capabilities and needs. Images are used to store and ship applications. An image can be used on its own to build a container or customized to add additional elements to extend the current configuration.
 >
-> You can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
+> We can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
 
 > #### Containers
 > Containers are sort of encapsulated environments in which you run applications. Container is defined by the image and any additional configuration options provided on starting the container, including and not limited to the network connections and storage options. Containers only have access to resources that are defined in the image, unless additional access is defined when building the image into a container.
 >
-> You can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
+> We can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
 
 > #### Networks
 > Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
 
-> - **Bridge:** It is the default network driver for a container. You use this network when your application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
+> - **Bridge:** It is the default network driver for a container. We use this network when our application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
 
-> - **Host:** This driver removes the network isolation between docker containers and docker host. You can use it when you don’t need any network isolation between host and container.
+> - **Host:** This driver removes the network isolation between docker containers and docker host. We can use it when we don’t need any network isolation between host and container.
 
-> - **Overlay:** This network enables swarm services to communicate with each other. You use it when you want the containers to run on different Docker hosts or when you want to form swarm services by multiple applications.
+> - **Overlay:** This network enables swarm services to communicate with each other. We use it when we want the containers to run on different Docker hosts or when we want to form swarm services by multiple applications.
 
 > - **None:** This driver disables all the networking.
 
-> - **macvlan:** This driver assigns mac address to containers to make them look like physical devices. It routes the traffic between containers through their mac addresses. You use this network when you want the containers to look like a physical device, for example, while migrating a VM setup.
+> - **macvlan:** This driver assigns mac address to containers to make them look like physical devices. It routes the traffic between containers through their mac addresses. We use this network when we want the containers to look like a physical device, for example, while migrating a VM setup.
 
 > ### Storage
-> You can store data within the writable layer of a container but it requires a storage driver. Being non-persistent, it perishes whenever the container is not running. Moreover, it is not easy to transfer this data. With respect to persistent storage, Docker offers four options:
+> We can store data within the writable layer of a container but it requires a storage driver. Being non-persistent, it perishes whenever the container is not running. Moreover, it is not easy to transfer this data. With respect to persistent storage, Docker offers four options:
 
 > - **Data Volumes:** They provide the ability to create persistent storage, with the ability to rename volumes, list volumes, and also list the container that is associated with the volume. Data Volumes are placed on the host file system, outside the containers copy on write mechanism and are fairly efficient.
 
@@ -74,4 +74,4 @@ The Docker host provides a complete environment to execute and run applications.
 
 ### Docker’s Registry
 
-Docker registries are services that provide locations from where you can store and download images. In other words, a Docker registry contains Docker repositories that host one or more Docker Images. Public Registries include two components namely the Docker Hub and Docker Cloud. You can also use Private Registries. The most common commands when working with registries include: docker push, docker pull, docker run
+Docker registries are services that provide locations from where we can store and download images. In other words, a Docker registry contains Docker repositories that host one or more Docker Images. Public Registries include two components namely the Docker Hub and Docker Cloud. We can also use Private Registries. The most common commands when working with registries include: docker push, docker pull, docker run
