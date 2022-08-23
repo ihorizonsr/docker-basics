@@ -31,7 +31,7 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 > Restart one or more containers
 -     docker container restart alpine-linux
 
-### Remove container
+### Remove stopped container
 -     docker rm alpine-linux
 
 ### Prune – remove all stopped containers
