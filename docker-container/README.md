@@ -27,7 +27,7 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 >     docker exec alpine-linux tail /var/log/date.log
 
 ### Running Commands in an Alternate Directory in a Docker Container
->     docker exec --workdir /tmp container-name pwd
+>     docker exec --workdir /tmp alpine-linux pwd
 
 ### Start or Stop container
 >     docker container stop 
