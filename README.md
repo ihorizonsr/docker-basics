@@ -8,9 +8,14 @@ Docker is the leading open-source container service provider that has ruled the 
 
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
-Virtual Machine takes a lot of time to boot up because the guest operating system needs to start from scratch, which will then load all the binaries and libraries. This is time consuming and will prove very costly at times when quick startup of applications is needed. In case of Docker Container, since the container runs on your host OS, you can save precious boot-up time. This is a clear advantage over Virtual Machine.
+> **Virtualization** − Virtualization is the technology that can simulate your physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
 
-Consider a situation where I want to install two different versions of PHP on your system. If you use Virtual Machine, It will need to set up 2 different Virtual Machines to run the different versions. Each of these will have its own set of binaries and libraries while running on different guest operating systems. Whereas if we use Docker Container, even though we will be creating 2 different containers where each container will have its own set of binaries and libraries, we will be running them on our host operating system. Running them straight on our Host operating system makes my Docker Containers lightweight and faster.
+> **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of your machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
+
+| Item         | Price | # In stock |
+|--------------|:-----:|-----------:|
+| Juicy Apples |  1.99 |        739 |
+| Bananas      |  1.89 |          6 |
 
 
 # Docker Architecture
