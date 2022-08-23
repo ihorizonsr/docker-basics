@@ -19,7 +19,7 @@ The CMD instruction is only utilized if there is no argument added to the run co
 Docker ENTRYPOINT is a Dockerfile directive or instruction that is used to specify the executable which should run when a container is started from a Docker image. It has two forms, the first one is the **exec** form and the second one is the **shell** form. If there is no entrypoint or CMD specified in the Docker image, it starts and exits at the same time that means container stops automatically so, we must have to specify entrypoint or CMD so that when we will start the container it should execute something rather than going to stop.
 
 ### Example:
->     FROM alpine
->     RUN apk add python
->     CMD ["8.8.8.8"]
->     ENTRYPOINT [ "ping", "-t", "5" ] 
+    FROM alpine
+    RUN apk add python
+    CMD ["8.8.8.8"]
+    ENTRYPOINT [ "ping", "-t", "5" ] 
