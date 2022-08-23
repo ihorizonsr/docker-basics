@@ -7,13 +7,15 @@ Docker Container is a standardized unit which can be created on the fly to deplo
 > ##### List containers
 >     docker container ls
 
+>     docker ps -a
+
 > ##### Difference between docker run and docker container run
 > They are exactly the same.
 > Prior to docker 1.13 the docker run command was only available. The CLI commands were then refactored to have the form docker COMMAND SUBCOMMAND, wherein this case the COMMAND is container and the SUBCOMMAND is run. This was done to have a more intuitive grouping of commands since the number of commands at the time has grown substantially.
 
 > ##### Run an Image in a container
 >     docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
->
+
 >     docker run --name ihz-nginx -d -p 8080:80 nginx
 >
 > - ***docker run***: The command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
