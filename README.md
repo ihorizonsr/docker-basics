@@ -16,6 +16,7 @@ Docker is the leading open-source container service provider that has ruled the 
 |--------------------  |-----------------------|--------------------------|
 | Technology           |One physical machine has multiple OSs residing on it and appears as multiple machines.                   |        The application developed in a host environment with same OS and the same machine executes flawlessly on multiple different environments.               |
 | Start-up Time        |Higher than containers |Less                      |
+|Speed of working      |VMs being a virtual copy of the host server on its own operating system, VMs are resource-heavy, hence slower | Containers are faster.
 
 
 # Docker Architecture
