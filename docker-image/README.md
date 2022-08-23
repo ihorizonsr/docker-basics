@@ -7,8 +7,8 @@ Docker Image is an executable package of software that includes everything neede
 > ##### List out all images
 > - docker image ls 
 
-> ##### Pull Image from Docker Hub  <\ImageName:TagName\>
-> - docker image pull nginx:latest
+> ##### Pull Image from Docker Hub - ImageName:TagName
+> - docker image pull **nginx:latest**
 
 > docker run --name ihz-nginx -d -p 8080:80 nginx
 
