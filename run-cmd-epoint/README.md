@@ -6,7 +6,7 @@ The **docker run** command is used to run or start a command in a new container 
 > ### How run Command Works in Docker?
 When we run the **docker run** command on the terminal, Docker daemon searches for the mentioned Docker image locally and if it finds the image locally then it creates a writeable layer over the specified Docker image and starts the container using specified command and if it does not find the image locally then it firsts pull that image from the registry and by default, it goes to **hub.docker.com** if there is no local registry mentioned in the daemon.json file.
 
->     docker run -d -e "USER=test1" --name web-nginx nginx
+    docker run -d -e "USER=test1" --name web-nginx nginx
 
 ### CMD
 Docker CMD defines the default executable of a Docker image. You can run this image as the base of a container without adding command-line arguments. In that case, the container runs the process specified by the CMD command.
