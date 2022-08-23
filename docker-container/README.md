@@ -23,6 +23,14 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 ### Running Commands in an Alternate Directory in a Docker Container
 -     docker exec --workdir /tmp alpine-linux pwd
 
+### Running Commands as a Different User in a Docker Container
+-     docker exec --user guest container-name whoami
+
+### Passing Environment Variables into a Docker Container
+-     docker exec -e TEST=sammy container-name env  
+-     docker exec -e TEST=sammy -e ENVIRONMENT=prod container-name env
+-     docker exec --env-file .env container-name env 
+
 ### Start or Stop or Restart container
 > Stop one or more running containers
 -     docker container stop alpine-linux
