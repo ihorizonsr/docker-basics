@@ -29,3 +29,35 @@ The following table compares and contrasts the different features of Virtualizat
 
 <img width="491" alt="image" src="https://user-images.githubusercontent.com/111513801/185914743-20071a43-7a34-4aa6-ace1-a687bdfe2373.png">
 
+## Docker Architecture
+The architecture of Docker uses a client-server model and consists of the Docker’s Client, Docker Host, Network and Storage components, and the Docker Registry/Hub. Let’s look at each of these in some detail.
+
+### Docker’s Client
+Docker users can interact with Docker through a client. When any docker commands runs, the client sends them to dockerd daemon, which carries them out. Docker API is used by Docker commands. It is possible for Docker client to communicate with more than one daemon.
+
+### Docker Host
+The Docker host provides a complete environment to execute and run applications. It comprises of the Docker daemon, Images, Containers, Networks, and Storage. As previously mentioned, the daemon is responsible for all container-related actions and receives commands via the CLI or the REST API. It can also communicate with other daemons to manage its services.
+
+### Docker Objects 
+> **Images**
+> Images are nothing but a read-only binary template that can build containers. They also contain metadata that describe the container’s capabilities and needs. Images are used to store and ship applications. An image can be used on its own to build a container or customized to add additional elements to extend the current configuration.
+>
+> You can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
+
+> **Containers**
+> Containers are sort of encapsulated environments in which you run applications. Container is defined by the image and any additional configuration options provided on starting the container, including and not limited to the network connections and storage options. Containers only have access to resources that are defined in the image, unless additional access is defined when building the image into a container.
+>
+> You can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
+
+> **Networks**
+> Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
+>
+> - **Bridge:** It is the default network driver for a container. You use this network when your application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
+>
+> - **Host:** This driver removes the network isolation between docker containers and docker host. You can use it when you don’t need any network isolation between host and container.
+>
+> - **Overlay:** This network enables swarm services to communicate with each other. You use it when you want the containers to run on different Docker hosts or when you want to form swarm services by multiple applications.
+>
+> - **None:** This driver disables all the networking.
+>
+> - **macvlan:** This driver assigns mac address to containers to make them look like physical devices. It routes the traffic between containers through their mac addresses. You use this network when you want the containers to look like a physical device, for example, while migrating a VM setup.
