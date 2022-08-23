@@ -4,10 +4,9 @@ Docker Container is a standardized unit which can be created on the fly to deplo
 
 #### Below are the basic commands which should be know to developers and system admins.
 
-#### List containers
->     docker container ls
-
->     docker ps -a
+### List containers
+     > docker container ls
+     > docker ps -a
 
 > ##### Difference between docker run and docker container run
 > They are exactly the same.
