@@ -12,10 +12,10 @@ Docker is the leading open-source container service provider that has ruled the 
 
 > **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of your machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
 
-|    Key Factor      |      Virtualization     |      Containerization    |
-|--------------------|-------------------------|--------------------------|
-| Technology         |One physical machine has multiple OSs residing on it and appears as multiple machines.                   |        The application developed in a host environment with same OS and the same machine executes flawlessly on multiple different environments.               |
-| Start-up Time      |Higher than containers   |Less                      |
+|    Key Factor        |      Virtualization   |      Containerization    |
+|--------------------  |-----------------------|--------------------------|
+| Technology           |One physical machine has multiple OSs residing on it and appears as multiple machines.                   |        The application developed in a host environment with same OS and the same machine executes flawlessly on multiple different environments.               |
+| Start-up Time        |Higher than containers |Less                      |
 
 
 # Docker Architecture
