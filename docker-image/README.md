@@ -1,4 +1,4 @@
-# docker-images
+# docker-image
 
 Docker Image is an executable package of software that includes everything needed to run an application. It contains the definitions of all the libraries, binaries, configuration files, etc. It also referred to as snapshots because they are immutable.
 
@@ -12,6 +12,7 @@ Docker Image is an executable package of software that includes everything neede
 >     docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
 >
 >     docker pull nginx:latest
+>     docker image pull nginx:latest
 
 > ##### Run an Image
 >     docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
