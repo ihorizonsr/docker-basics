@@ -7,11 +7,15 @@ Docker Image is an executable package of software that includes everything neede
 > ##### List out all images
 >     docker image ls 
 
-> ##### Pull Image from Docker Hub Repository - ImageName:TagName
->     docker image pull nginx:latest
+> ##### Pull an Image from Docker Hub Repository or Registry
+>     docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+>     docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
+>
+>     docker pull nginx:latest
 
 > ##### Run an Image
 >     docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+>
 >     docker run --name ihz-nginx -d -p 8080:80 nginx
 >
 > - ***docker run***: The command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
@@ -21,10 +25,12 @@ Docker Image is an executable package of software that includes everything neede
 
 > ##### Show history of an image
 >     docker image history [OPTIONS] IMAGE
+>
 >     docker image history nginx
 
 > ##### Remove images
 >     docker image rm [OPTIONS] IMAGE [IMAGE...] 
+>
 >     docker image rm nginx
 
 > ##### Prune – remove unused images
@@ -32,6 +38,7 @@ Docker Image is an executable package of software that includes everything neede
 
 > ##### Build an Image from Dockerfile
 >     docker build [OPTIONS] PATH | URL | -
+>
 >     docker build 
 
 ## Docker Document References
