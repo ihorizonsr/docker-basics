@@ -43,7 +43,7 @@ Docker Image is an executable package of software that includes everything neede
 > ##### Build an Image from Dockerfile
 >     docker build [OPTIONS] PATH | URL | -
 >
->     docker build 
+>     docker build .
 
 ## Docker Document References:
 > -   <https://docs.docker.com/engine/reference/commandline/image/>
