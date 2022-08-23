@@ -50,15 +50,15 @@ The Docker host provides a complete environment to execute and run applications.
 
 > #### Networks
 > Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
->
+
 > - **Bridge:** It is the default network driver for a container. You use this network when your application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
->
+
 > - **Host:** This driver removes the network isolation between docker containers and docker host. You can use it when you don’t need any network isolation between host and container.
->
+
 > - **Overlay:** This network enables swarm services to communicate with each other. You use it when you want the containers to run on different Docker hosts or when you want to form swarm services by multiple applications.
->
+
 > - **None:** This driver disables all the networking.
->
+
 > - **macvlan:** This driver assigns mac address to containers to make them look like physical devices. It routes the traffic between containers through their mac addresses. You use this network when you want the containers to look like a physical device, for example, while migrating a VM setup.
 
 > ### Storage
