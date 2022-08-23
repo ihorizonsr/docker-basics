@@ -19,12 +19,12 @@ They are exactly the same. Prior to docker 1.13 the docker run command was only 
 
 >     docker rename ihz-linux alpine-linux
 ### Running an Interactive & Non-Interactive Shell in a Docker Container
->     docker exec -it container-name sh
-> If your container image includes a more advanced shell such as bash, we can replace sh with bash above.
+>     docker exec -it alpine-linux sh
+> If the container image includes a more advanced shell such as bash, we can replace sh with bash above.
 >     exit
 
 
->     docker exec container-name tail /var/log/date.log
+>     docker exec alpine-linux tail /var/log/date.log
 
 ### Running Commands in an Alternate Directory in a Docker Container
 >     docker exec --workdir /tmp container-name pwd
