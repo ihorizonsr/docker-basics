@@ -12,12 +12,15 @@ Docker is the leading open-source container service provider that has ruled the 
 
 > **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of your machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
 
-|    Key Factor        |      Virtualization   |      Containerization    |
-|----------------------|-----------------------|--------------------------|
-| Technology           |One physical machine has multiple OSs residing on it and appears as multiple machines.                   |        The application developed in a host environment with same OS and the same machine executes flawlessly on multiple different environments.               |
-| Start-up Time        |Higher than containers |Less                      |
-|Speed of working      |VMs being a virtual copy of the host server on its own operating system, VMs are resource-heavy, hence slower | Containers are faster.
-
+| Key Factor | Virtualization | Containerization |
+|---|---|---|
+| Technology | One physical machine has multiple OSs residing on it and appears as multiple machines. | The application developed in a host environment with same OS and the same machine executes flawlessly on multiple different environments. |
+| Start-up Time | Higher than containers | Less |
+| Speed of working | VMs being a virtual copy of the host server on its own operating system, VMs are resource-heavy, hence slower. | Containers are faster. |
+| Size | Larger | Smaller |
+| Component that Virtualizes and the one being virtualized | Hypervisors virtualize the underlying hardware (use of the same hardware). | Containers virtualize the operating system (use of the same OS). |
+| Cost of implementation | Higher | Lower |
+| Benefits for | IT enterprise businesses | Software developers and in turn IT businesses |
 
 # Docker Architecture
 
