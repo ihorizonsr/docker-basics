@@ -6,7 +6,7 @@ Docker is the leading open-source container service provider that has ruled the 
 
 # Containerization vs Virtualization or Virtual Machine
 
-<img width="557" alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
+<img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
 > **Virtualization** − Virtualization is the technology that can simulate the physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
 
