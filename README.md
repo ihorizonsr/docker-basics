@@ -4,6 +4,14 @@ Learn Docker container basics...
 
 Docker is the leading open-source container service provider that has ruled the entire market since its inception. It’s easy to learn and makes the development and deployment of applications a piece of cake. However, when a beginner starts learning Docker containerization, it seems to be somewhat confusing because of certain terminologies that they come across such as containers, images, volumes, docker hub, docker-engine, registries, etc. In fact, if a beginner gets hold of two of the most important artifacts of Docker containerization - Docker Images and Docker Containers, then it’s easier for him/her to ace through the entire concept.
 
+This repo orgainsed the documentation and sample code in such a manner so that anyone one can get started with Docker with littel attention. Please follwo below index to get best out of it.
+
+1. [Introduction to Docker](https://github.com/ihorizonsr/docker-basics)
+2. [Docker Images](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
+3. [Docker Container](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
+4. [Docker COPY ADD](https://github.com/ihorizonsr/docker-basics/tree/main/copy-add-vol)
+5. [Docker RUN CMD ENTRYPOINT](https://github.com/ihorizonsr/docker-basics/tree/main/run-cmd-epoint)
+6. [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/run-cmd-epoint)
 # Containerization vs Virtualization or Virtual Machine
 
 <img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
