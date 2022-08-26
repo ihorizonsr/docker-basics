@@ -56,10 +56,14 @@ The Docker host provides a complete environment to execute and run applications.
     
     We can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
 
+    #### [Docker Images](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
+
 2. ### Containers
     Containers are sort of encapsulated environments in which you run applications. Container is defined by the image and any additional configuration options provided on starting the container, including and not limited to the network connections and storage options. Containers only have access to resources that are defined in the image, unless additional access is defined when building the image into a container.
 
     We can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
+
+    #### [Docker Containers](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
 
 3. ### Networks
     Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
@@ -85,9 +89,14 @@ The Docker host provides a complete environment to execute and run applications.
 
 - **Storage Plugins:** Storage Plugins provide the ability to connect to external storage platforms. These plugins map storage from the host to an external source like a storage array or an appliance. You can see a list of storage plugins on Docker’s Plugin page.
 
+    #### [Docker Storage](https://github.com/ihorizonsr/docker-basics/tree/main/copy-add-vol)
+
+
 ### Docker’s Registry
 
 Docker registries are services that provide locations from where we can store and download images. In other words, a Docker registry contains Docker repositories that host one or more Docker Images. Public Registries include two components namely the Docker Hub and Docker Cloud. We can also use Private Registries. The most common commands when working with registries include: docker push, docker pull, docker run. 
+
+#### [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/docker-registry)
 
 ---
 
