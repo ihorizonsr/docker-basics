@@ -52,17 +52,17 @@ The Docker host provides a complete environment to execute and run applications.
 
 ### Docker Objects 
 1. ### Images
-> Images are nothing but a read-only binary template that can build containers. They also contain metadata that describe the container’s capabilities and needs. Images are used to store and ship applications. An image can be used on its own to build a container or customized to add additional elements to extend the current configuration.
->
-> We can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
+    Images are nothing but a read-only binary template that can build containers. They also contain metadata that describe the container’s capabilities and needs. Images are used to store and ship applications. An image can be used on its own to build a container or customized to add additional elements to extend the current configuration. 
+    
+    We can share the container images across teams within an enterprise with the help of a private container registry, or share it with the world using a public registry like Docker Hub. Images are the core element of the Docker experience as they enable collaboration between developers in a way that was not possible before
 
 2. ### Containers
-> Containers are sort of encapsulated environments in which you run applications. Container is defined by the image and any additional configuration options provided on starting the container, including and not limited to the network connections and storage options. Containers only have access to resources that are defined in the image, unless additional access is defined when building the image into a container.
->
-> We can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
+    Containers are sort of encapsulated environments in which you run applications. Container is defined by the image and any additional configuration options provided on starting the container, including and not limited to the network connections and storage options. Containers only have access to resources that are defined in the image, unless additional access is defined when building the image into a container.
+
+    We can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
 
 3. ### Networks
-     Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
+    Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
 
 - **Bridge:** It is the default network driver for a container. We use this network when our application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
 
