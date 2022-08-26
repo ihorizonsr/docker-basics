@@ -62,7 +62,7 @@ The Docker host provides a complete environment to execute and run applications.
 > We can also create a new image based on the current state of a container. Since containers are much smaller than VMs, they can be spun in a matter of seconds, and result in much better server density
 
 3. ### Networks
-> Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
+     Docker networking is a passage through which all the isolated container communicate. There are mainly five network drivers in docker:
 
 - **Bridge:** It is the default network driver for a container. We use this network when our application is running on standalone containers, i.e. multiple containers communicating with the same docker host.
 
@@ -75,7 +75,7 @@ The Docker host provides a complete environment to execute and run applications.
 -  **macvlan:** This driver assigns mac address to containers to make them look like physical devices. It routes the traffic between containers through their mac addresses. We use this network when we want the containers to look like a physical device, for example, while migrating a VM setup.
 
 4. ### Storage
-> We can store data within the writable layer of a container but it requires a storage driver. Being non-persistent, it perishes whenever the container is not running. Moreover, it is not easy to transfer this data. With respect to persistent storage, Docker offers four options:
+     We can store data within the writable layer of a container but it requires a storage driver. Being non-persistent, it perishes whenever the container is not running. Moreover, it is not easy to transfer this data. With respect to persistent storage, Docker offers four options:
 
 - **Data Volumes:** They provide the ability to create persistent storage, with the ability to rename volumes, list volumes, and also list the container that is associated with the volume. Data Volumes are placed on the host file system, outside the containers copy on write mechanism and are fairly efficient.
 
