@@ -11,7 +11,7 @@ Pre-requisite: Please setup Docker Engine on your local system.
 3. [Docker Container](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
 4. [Docker COPY ADD](https://github.com/ihorizonsr/docker-basics/tree/main/copy-add-vol)
 5. [Docker RUN CMD ENTRYPOINT](https://github.com/ihorizonsr/docker-basics/tree/main/run-cmd-epoint)
-6. [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/run-cmd-epoint)
+6. [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/docker-registry)
 
 # Introduction to Docker:
 
