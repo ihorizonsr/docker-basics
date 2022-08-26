@@ -36,11 +36,8 @@ Docker Image is an executable package of software that includes everything neede
 -   <https://docs.docker.com/engine/reference/commandline/image/>
 -   <https://docs.docker.com/engine/reference/commandline/images/>
 
-### [Next](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
-### [Back](https://github.com/ihorizonsr/docker-basics)
+---
 
-<div style="text-align: right">
-![Next](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
-</div>
+### [Next >>](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   [<< Back](https://github.com/ihorizonsr/docker-basics)
 
 
