@@ -89,4 +89,4 @@ The Docker host provides a complete environment to execute and run applications.
 
 Docker registries are services that provide locations from where we can store and download images. In other words, a Docker registry contains Docker repositories that host one or more Docker Images. Public Registries include two components namely the Docker Hub and Docker Cloud. We can also use Private Registries. The most common commands when working with registries include: docker push, docker pull, docker run.
 
-# [Go To Next Section](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
+### [Go To Next Section](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
