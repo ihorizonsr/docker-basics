@@ -24,15 +24,19 @@ The documentation and the sample code arranged in a manner that anyone with litt
 
 # Introduction to Docker:
 
-Docker is the leading open-source container service provider that has ruled the entire market since its inception. It’s easy to learn and makes the development and deployment of applications a piece of cake. However, when a beginner starts learning Docker containerization, it seems to be somewhat confusing because of certain terminologies that they come across such as containers, images, volumes, docker hub, docker-engine, registries, etc. In fact, if a beginner gets hold of two of the most important artifacts of Docker containerization - **Docker Images** and **Docker Containers**, then it’s easier for him/her to ace through the entire concept.
+Docker is the leading open-source container service provider that has ruled the entire market since its inception. It’s easy to learn and makes the development and deployment of applications a piece of cake. However, when a beginner starts learning Docker containerization, it seems to be somewhat confusing because of certain terminologies that they come across such as containers, images, volumes, docker hub, docker-engine, registries, etc. In fact, if a beginner gets hold of two of the most important artifacts of Docker containerization - **Docker Images** and **Docker Containers**, then it’s easier for him/her to ace through the entire concept. Let's understand first, in short how containerization evoloved.
 
-# Containerization vs Virtualization or Virtual Machine
+Data centers consist of a large number of enterprise servers. Not all servers are active at the same time. In case traffic is directed mostly to a particular set of servers more, those servers get busy. The other servers are less loaded, or they even turn totally inactive, thereby wasting power, maintenance costs, and other allied resources.
 
-<img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
+With the changing times, businesses started looking for solutions to reduce overhead costs, enhance scalability, and standardize application deployment process. They started considering the following two approaches to reduce costs i.e. Virtualization & Containerization.
 
 > **Virtualization:** Virtualization is the technology that can simulate the physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
 
 > **Containerization:** Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of the machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
+
+# Containerization vs Virtualization or Virtual Machine
+
+<img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
 ### Difference between Virtualization and Containerization
 The following table compares and contrasts the different features of Virtualization and Containerization 
@@ -49,7 +53,11 @@ The following table compares and contrasts the different features of Virtualizat
 
 # Docker Architecture
 
+As we now aware that Docker is the most popular containerization technology, so we should know littl details of its *Architecture, Components and Objects* as well.
+
+
 <img alt="image" src="https://user-images.githubusercontent.com/111513801/185914743-20071a43-7a34-4aa6-ace1-a687bdfe2373.png">
+
 
 The architecture of Docker uses a client-server model and consists of the Docker’s Client, Docker Host, Network and Storage components, and the Docker Registry/Hub. Let’s look at each of these in some detail.
 
