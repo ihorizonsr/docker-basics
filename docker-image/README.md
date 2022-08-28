@@ -25,9 +25,9 @@ Docker Image is an executable package of software that includes everything neede
     docker image history nginx
 
 ### Remove images
->    docker image rm nginx
-
->    docker rmi nginx
+    docker image rm nginx
+---
+    docker rmi nginx
 
 ### Prune – remove unused images
     docker image prune 
