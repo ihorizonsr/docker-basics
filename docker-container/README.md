@@ -5,9 +5,12 @@ Docker Container is a standardized unit which can be created on the fly to deplo
 #### Below are the basic commands which should be know to developers and system admins.
 
 ### List containers
--     docker container ls
--     docker ps -a
-
+```bash
+docker container ls
+```
+```bash
+docker ps -a
+```
 ### Difference between docker *run* and docker *container run*
 They are exactly the same. Prior to docker 1.13 the docker run command was only available. The CLI commands were then refactored to have the form docker COMMAND SUBCOMMAND, wherein this case the COMMAND is container and the SUBCOMMAND is run. This was done to have a more intuitive grouping of commands since the number of commands at the time has grown substantially.
 
@@ -25,30 +28,47 @@ docker rename ihz-linux alpine-linux
 -     docker exec alpine-linux tail /var/log/date.log
 
 ### Running Commands in an Alternate Directory in a Docker Container
--     docker exec --workdir /tmp alpine-linux pwd
-
+```bash
+docker exec --workdir /tmp alpine-linux pwd
+```
 ### Running Commands as a Different User in a Docker Container
--     docker exec --user guest alpine-linux whoami
+```bash
+docker exec --user guest alpine-linux whoami
+```
 
 ### Passing Environment Variables into a Docker Container
--     docker exec -e TEST=DevOps alpine-linux env  
--     docker exec -e TEST=DevOps -e ENVIRONMENT=prod alpine-linux env
--     docker exec --env-file .env alpine-linux env 
+```bash
+docker exec -e TEST=DevOps alpine-linux env
+```
+```bash  
+docker exec -e TEST=DevOps -e ENVIRONMENT=prod alpine-linux env
+```
+```bash
+docker exec --env-file .env alpine-linux env
+``` 
 
 ### Start or Stop or Restart container
 > Stop one or more running containers
--     docker container stop alpine-linux
+```bash
+docker container stop alpine-linux
+```
 > Start one or more stopped containers
--     docker container start alpine-linux
+```bash
+docker container start alpine-linux
+```
 > Restart one or more containers
--     docker container restart alpine-linux
+```bash
+docker container restart alpine-linux
+```
 
 ### Remove stopped container
--     docker rm alpine-linux
-
+```bash
+docker rm alpine-linux
+```
 ### Prune – remove all stopped containers
--     docker container prune 
-
+```bash
+docker container prune 
+```
 ## Docker Document References:
 -   <https://docs.docker.com/engine/reference/commandline/container/>
 
