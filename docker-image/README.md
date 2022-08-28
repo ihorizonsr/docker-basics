@@ -5,14 +5,14 @@ Docker Image is an executable package of software that includes everything neede
 #### Below are the basic commands which should be know to developers and system admins.
 
 ### List out all images
->    docker image ls
-
->    docker images
+    docker image ls
+--- 
+    docker images
 
 ### Pull an Image from Docker Hub Repository or Registry
->     docker pull nginx:latest
-
->     docker image pull nginx:latest
+    docker pull nginx:latest
+---
+    docker image pull nginx:latest
 
 ### Run an Image in a container
     docker run --name ihz-nginx -d -p 8080:80 nginx
