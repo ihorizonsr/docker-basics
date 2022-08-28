@@ -2,10 +2,19 @@
 
 Learn Docker container basics...
 
-This repo orgainsed the sample code and documentation in a manner that anyone with lttle technical backgroud can get started with Docker containerization, however littel attention required. Please follow below index to get best out of this repo.
+The documentation and the sample code arranged in a manner that anyone with little technical background can get started with Docker containerization, however little attention required. 
 
-Pre-requisite: Please setup Docker Engine on your local system.
+**Pre-requisite:** Please setup Docker Engine on your local system as mentioned in below links: 
 
+> [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/)
+
+> [Install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
+
+> [Install Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/)
+
+**Please Note:** If you are new to Docker or reading first time then first follow **order** as mentioned below in **Table of Content**  i.e. 1 to 6 to get best out of it.
+
+## Table of Content:
 1. [Introduction to Docker](https://github.com/ihorizonsr/docker-basics)
 2. [Docker Images](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
 3. [Docker Container](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
@@ -15,15 +24,15 @@ Pre-requisite: Please setup Docker Engine on your local system.
 
 # Introduction to Docker:
 
-Docker is the leading open-source container service provider that has ruled the entire market since its inception. It’s easy to learn and makes the development and deployment of applications a piece of cake. However, when a beginner starts learning Docker containerization, it seems to be somewhat confusing because of certain terminologies that they come across such as containers, images, volumes, docker hub, docker-engine, registries, etc. In fact, if a beginner gets hold of two of the most important artifacts of Docker containerization - Docker Images and Docker Containers, then it’s easier for him/her to ace through the entire concept.
+Docker is the leading open-source container service provider that has ruled the entire market since its inception. It’s easy to learn and makes the development and deployment of applications a piece of cake. However, when a beginner starts learning Docker containerization, it seems to be somewhat confusing because of certain terminologies that they come across such as containers, images, volumes, docker hub, docker-engine, registries, etc. In fact, if a beginner gets hold of two of the most important artifacts of Docker containerization - **Docker Images** and **Docker Containers**, then it’s easier for him/her to ace through the entire concept.
 
 # Containerization vs Virtualization or Virtual Machine
 
 <img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
-> **Virtualization** − Virtualization is the technology that can simulate the physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
+> **Virtualization:** Virtualization is the technology that can simulate the physical hardware (such as CPU cores, memory, disk) and represent it as a separate machine. It has its own Guest OS, Kernel, process, drivers, etc. Therefore, it is hardware-level virtualization. Most common technology is "VMware" and "Virtual Box".
 
-> **Containerization** − Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of the machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
+> **Containerization:** Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of the machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
 
 ### Difference between Virtualization and Containerization
 The following table compares and contrasts the different features of Virtualization and Containerization 
@@ -45,7 +54,7 @@ The following table compares and contrasts the different features of Virtualizat
 The architecture of Docker uses a client-server model and consists of the Docker’s Client, Docker Host, Network and Storage components, and the Docker Registry/Hub. Let’s look at each of these in some detail.
 
 ### Docker’s Client
-Docker users can interact with Docker through a client. When any docker commands runs, the client sends them to dockerd daemon, which carries them out. Docker API is used by Docker commands. It is possible for Docker client to communicate with more than one daemon.
+Docker users can interact with Docker through a client. When any docker commands runs, the client sends them to docker daemon, which carries them out. Docker API is used by Docker commands. It is possible for Docker client to communicate with more than one daemon.
 
 ### Docker Host
 The Docker host provides a complete environment to execute and run applications. It comprises of the Docker daemon, Images, Containers, Networks, and Storage. As previously mentioned, the daemon is responsible for all container-related actions and receives commands via the CLI or the REST API. It can also communicate with other daemons to manage its services.
