@@ -22,11 +22,16 @@ docker run -d --name ihz-linux alpine watch "date >> /var/log/date.log"
 docker rename ihz-linux alpine-linux
 ```
 ### Running an Interactive & Non-Interactive Shell in a Docker Container
--     docker exec -it alpine-linux sh
+```bash
+docker exec -it alpine-linux sh
+```
 > If the container image includes a more advanced shell such as bash, we can replace sh with bash above.
--     exit
--     docker exec alpine-linux tail /var/log/date.log
-
+```bash
+exit
+```
+```bash
+docker exec alpine-linux tail /var/log/date.log
+```
 ### Running Commands in an Alternate Directory in a Docker Container
 ```bash
 docker exec --workdir /tmp alpine-linux pwd
