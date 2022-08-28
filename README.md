@@ -34,7 +34,7 @@ With the changing times, businesses started looking for solutions to reduce over
 
 > **Containerization:** Containerization is "OS-level virtualization". It doesn't simulate the entire physical machine. It just simulates the OS of the machine. Therefore, multiple applications can share the same OS kernel. Containers play similar roles as virtual machine but without hardware virtualization. Most common container technology is "Docker".
 
-# Containerization vs Virtualization or Virtual Machine
+## Containerization vs Virtualization or Virtual Machine
 
 <img alt="image" src="https://user-images.githubusercontent.com/111513801/185914093-401eb14a-698d-48bf-b862-29fc816251eb.png">
 
@@ -51,7 +51,7 @@ The following table compares and contrasts the different features of Virtualizat
 | Cost of implementation | Higher | Lower |
 | Benefits for | IT enterprise businesses | Software developers and in turn IT businesses |
 
-# Docker Architecture
+## Docker Architecture
 
 As we now aware that Docker is the most popular containerization technology, so we should know littl details of its *Architecture, Components and Objects* as well.
 
