@@ -5,33 +5,39 @@ Docker Image is an executable package of software that includes everything neede
 #### Below are the basic commands which should be know to developers and system admins.
 
 ### List out all images
--     docker image ls
--     docker images
+>    docker image ls
+
+>    docker images
 
 ### Pull an Image from Docker Hub Repository or Registry
--     docker pull nginx:latest
--     docker image pull nginx:latest
+>     docker pull nginx:latest
+
+>     docker image pull nginx:latest
 
 ### Run an Image in a container
--     docker run --name ihz-nginx -d -p 8080:80 nginx
+    docker run --name ihz-nginx -d -p 8080:80 nginx
 > - ***docker run***: The command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
 > - ***-d***: Docker container runs in the background of the terminal.
 > - ***-p***: Expose port 80 [internally accessable] to host or outside with 8080 [exterally accessable]
 > - ***--name***: Assign a name to the container
 
 ### Show history of an image
--     docker image history nginx
+    docker image history nginx
 
 ### Remove images
--     docker image rm nginx
--     docker rmi nginx
+>    docker image rm nginx
+
+>    docker rmi nginx
 
 ### Prune – remove unused images
--     docker image prune 
+    docker image prune 
 
 ### Build an Image from Dockerfile
--     docker build .
+    docker build .
 
+#### Dockerfile: Sample
+    FROM nginx:latest
+    CMD echo "Hello world!"
 ## Docker Document References:
 -   <https://docs.docker.com/engine/reference/commandline/image/>
 -   <https://docs.docker.com/engine/reference/commandline/images/>
