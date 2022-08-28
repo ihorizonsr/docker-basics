@@ -12,15 +12,14 @@ The documentation and the sample code arranged in a manner that anyone with litt
 
 > [Install Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/)
 
-**Please Note:** If you are new to Docker or reading first time then first follow **order** as mentioned below in **Table of Content**  i.e. 1 to 6 to get best out of it.
+**Please Note:** If you are new to Docker or reading first time then first follow **order** as mentioned below in **Table of Content**  i.e. 1 to 5 to get best out of it.
 
 ## Table of Content:
 1. [Introduction to Docker](https://github.com/ihorizonsr/docker-basics#introduction-to-docker)
 2. [Docker Images](https://github.com/ihorizonsr/docker-basics/tree/main/docker-image)
 3. [Docker Container](https://github.com/ihorizonsr/docker-basics/tree/main/docker-container)
-4. [Docker COPY ADD](https://github.com/ihorizonsr/docker-basics/tree/main/copy-add-vol)
-5. [Docker RUN CMD ENTRYPOINT](https://github.com/ihorizonsr/docker-basics/tree/main/run-cmd-epoint)
-6. [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/docker-registry)
+4. [Docker Dockerfile](https://github.com/ihorizonsr/docker-basics/tree/main/docker-dockerfile)
+5. [Docker Registry](https://github.com/ihorizonsr/docker-basics/tree/main/docker-registry)
 
 # Introduction to Docker:
 
