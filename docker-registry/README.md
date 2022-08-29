@@ -35,7 +35,7 @@ docker run ihorizons/ra-nginx:v1 #Test the build image
 ```bash
 docker push ihorizons/ra-nginx:v1
 ```
-### Reference: [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
+
 2. Few other alternates for Docker Registry are: 
     - JFrog Bintray i.e a cloud platform that provides services of managing, deploying, and promoting your applications.
     - Gitlab Container Registry, which is a private and highly secure repository for storing docker images.
@@ -53,6 +53,7 @@ Users get access to free public repositories for storing and sharing images or c
 - Quay.io
 - Github Container Registry
 
+## Reference: [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
 ---
 
 ### [<<Back](https://github.com/ihorizonsr/docker-basics/tree/main/docker-dockerfile)
