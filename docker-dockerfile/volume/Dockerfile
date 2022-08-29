@@ -1,3 +1,4 @@
-FROM httpd:2.4
-
-COPY . /usr/local/apache2/htdocs/
+FROM ubuntu
+RUN mkdir /myvol
+RUN echo "hello world" > /myvol/greeting
+VOLUME D:\data:/myvol
