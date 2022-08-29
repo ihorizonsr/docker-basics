@@ -18,14 +18,14 @@ Following are some of the alternatives of Docker Registry:
 docker login
 ```
 
-**Dockerfile:**
+> **Dockerfile:**
 
 ```bash
 FROM httpd:2.4
 
 COPY . /usr/local/apache2/htdocs/
 ```
-**docker build -t \<username>/\<repo-name>:\<tagname>**
+> **docker build -t \<username>/\<repo-name>:\<tagname>**
 ```bash
 docker build -t ihorizons/ra-nginx:v1
 ```
