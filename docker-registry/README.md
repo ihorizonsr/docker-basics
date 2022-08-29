@@ -53,7 +53,8 @@ Users get access to free public repositories for storing and sharing images or c
 - Quay.io
 - Github Container Registry
 
-## Reference: [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
+## Reference:
+- [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
 ---
 
 ### [<<Back](https://github.com/ihorizonsr/docker-basics/tree/main/docker-dockerfile)
