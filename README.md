@@ -105,7 +105,7 @@ The Docker host provides a complete environment to execute and run applications.
 
 - **Storage Plugins:** Storage Plugins provide the ability to connect to external storage platforms. These plugins map storage from the host to an external source like a storage array or an appliance. You can see a list of storage plugins on Docker’s Plugin page.
 
-    #### [Docker Storage](https://github.com/ihorizonsr/docker-basics/tree/main/copy-add-vol)
+    #### [Docker Storage](https://github.com/ihorizonsr/docker-basics/tree/main/docker-dockerfile#volume)
 
 
 ### Docker’s Registry
