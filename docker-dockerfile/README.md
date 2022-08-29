@@ -73,7 +73,9 @@ example:
 ```bash
 docker run -d --name test -v D:\data:/app nginx:latest
 ```
-
+```bash
+Type in the Windows file explorer: \\wsl$\docker-desktop-data\data\docker\volumes
+```
 ### **RUN:**
 The **docker run** command is used to run or start a command in a new container which means it creates a writeable layer on top of the mentioned image in the command. That’s why we call a container is a writeable image. This is the first command that we run when start learning Docker. There are a lot of options available with this command to configure the container as per our requirement like running a container in detached mode or interactive mode, specifying a name to the container, attaching network, volume, etc., exposing port to access the containers’ application externally, and many more things.
 
