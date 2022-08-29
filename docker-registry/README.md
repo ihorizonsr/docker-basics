@@ -15,8 +15,27 @@ Following are some of the alternatives of Docker Registry:
 1. [Docker Hub](https://hub.docker.com/) is a service provided by Docker for finding and sharing container images with your team. It is the world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.
 
 ```bash
-docker push ihorizons/ra-nginx:tagname
+docker login
 ```
+
+**Dockerfile:**
+
+```bash
+FROM httpd:2.4
+
+COPY . /usr/local/apache2/htdocs/
+```
+**docker build -t <username>/repo-name:tagname**
+```bash
+docker build -t ihorizons/ra-nginx:v1
+```
+```bash
+docker run ihorizons/ra-nginx:v1 #Test the build image
+```
+```bash
+docker push ihorizons/ra-nginx:v1
+```
+### Reference: [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
 2. Few other alternates for Docker Registry are: 
     - JFrog Bintray i.e a cloud platform that provides services of managing, deploying, and promoting your applications.
     - Gitlab Container Registry, which is a private and highly secure repository for storing docker images.
