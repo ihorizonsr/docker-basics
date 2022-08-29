@@ -67,7 +67,7 @@ docker run -d --name test -v my-vol:/app nginx:latest
 docker inspect test
 ```
 ```bash
-docker run -d --name test -v \<Source Path>:<Destination Path> nginx:latest
+docker run -d --name test -v <Source Path>:<Destination Path> nginx:latest
 ```
 example:
 ```bash
