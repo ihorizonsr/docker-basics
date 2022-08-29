@@ -55,6 +55,7 @@ Users get access to free public repositories for storing and sharing images or c
 
 ## Reference:
 - [Docker Hub Quick Start](https://docs.docker.com/docker-hub/)
+- [Push your first image to your Azure container registry using the Docker CLI](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli)
 ---
 
 ### [<<Back](https://github.com/ihorizonsr/docker-basics/tree/main/docker-dockerfile)
