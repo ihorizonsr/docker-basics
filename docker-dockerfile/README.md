@@ -14,17 +14,17 @@
 ## RUN:
 
 RUN commands always executes in a new layer and creates a new image layer. It is often used for installing software packages and applications.
-- Shell Form:
+#### Shell Form:
 ```bash
 <instruction> <command>
 RUN apt-get -y update
 ```
-- Exectuable Form:
+#### Exectuable Form:
 ```bash
 <instruction> ["executable","param1","param2",...]
 RUN ["apt-get", "install", "apache2"]
 ```
-- Dockerfile:
+#### Dockerfile:
 ```bash    
 FROM ubuntu
 RUN apt-get -y update && apt-get install apache2
@@ -37,17 +37,17 @@ RUN apk add --froce httpd
 
 CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
 
-- Shell Form:
+#### Shell Form:
 ```bash
 CMD command param1 param2
 CMD echo "Hello World"
 ```
-- Exectuable Form:
+#### Exectuable Form:
 ```bash
 CMD ["executable","param1","param2",...]
 CMD ["/bin/echo", "Hello World"]
 ```
-- Dockerfile:
+#### Dockerfile:
 ```bash
 FROM alpine
 CMD echo "Hello World"
@@ -60,19 +60,19 @@ docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter r
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
 
-- Shell Form:
+#### Shell Form:
 ```bash
 ENTRYPOINT command param1 param2
 ENTRYPOINT echo "Hello World"
 ```
-- Executable Form:
+#### Executable Form:
 ```bash
 ENTRYPOINT ["executable","param1","param2",...]
 ENTRYPOINT ["/bin/echo", "Hello World"]
 ```
 > Executable form of ENTRYPOINT allows you to set commands and parameters and then use either form of CMD to set addtional parameters that are more likely to be changed
 
-- Dockerfile:
+#### Dockerfile:
 ```bash
 FROM alpine
 ENTRYPOINT ["/bin/echo", "Hello"]
