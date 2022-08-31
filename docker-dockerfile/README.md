@@ -148,6 +148,8 @@ docker volume create my-vol
 ```bash
 docker volume create ls
 ```
+> Volume Location: \\wsl$\docker-desktop-data\data\docker\volumes
+  
 ```bash
 docker run -d --name test -v my-vol:/app nginx:latest
 ```
@@ -161,9 +163,7 @@ example:
 ```bash
 docker run -d --name test -v D:\data:/app nginx:latest
 ```
-```bash
-Type in the Windows file explorer: \\wsl$\docker-desktop-data\data\docker\volumes
-```
+
 
 ## Docker Document Reference:
 - [Docker Volumes](https://docs.docker.com/storage/)
