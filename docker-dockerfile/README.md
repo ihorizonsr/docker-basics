@@ -1,17 +1,53 @@
 # Dockerfile:
 
-Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
+- Docker can build images automatically by reading the instructions from a Dockerfile.
+- A Dockerfile must begin with a **FROM** instruction. The **FROM** instruction specifies the **Parent Image** from which you are building.
+- The image is usually built by executing **Docker instructions**, which added **layers** on top of existing image.
+- The final docker image can be considered as a layered structure where there is a core or a base image and on top of that, there are several layered intermediate images.
 
-This page describes the commands that system admins or developers can use in a Dockerfile.
+Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
 
-## Dockerfile:
-```bash
-# Comment
-INSTRUCTION arguments
+- All RUN, CMD and ENTRYPOINT commands have 2 forms (Shall & Executable):
+- Shell Form - <Instruction> <command>
+- Executable Form - <instruction>["executable","param1","param2",...]
 
-Example:
+## RUN:
 
-```
+RUN commands always executes in a new layer and creates a new image layer. It is often used for installing software packages and applications.
+- Shell Form:
+    <instruction> <command>
+    RUN apt-get -y update
+- Exectuable Form:
+    <instruction> ["executable","param1","param2",...]
+    RUN ["apt-get", "install", "apache2"]
+- Dockerfile:
+    FROM ubuntu
+    RUN apt-get -y update && apt-get install apache2
+      
+    FROM alpine
+    RUN apk add --froce httpd
+
+## CMD:
+
+CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
+
+- Shell Form:
+    CMD command param1 param2
+    CMD echo "Hello World"
+- Exectuable Form:
+    CMD ["executable","param1","param2",...]
+    CMD ["/bin/echo", "Hello World"]
+- Dockerfile:
+    FROM alpine
+    CMD echo "Hello World"
+  
+  docker run it image will print Hello World
+  docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter run instead
+
+## ENTRYPOINT
+
+ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
+
 
 ## COPY & ADD Directives:
 
