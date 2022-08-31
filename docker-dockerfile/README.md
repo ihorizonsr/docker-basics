@@ -5,7 +5,7 @@
 - The image is usually built by executing **Docker instructions**, which added **layers** on top of existing image.
 - The final docker image can be considered as a layered structure where there is a core or a base image and on top of that, there are several layered intermediate images.
 
-### Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
+#### Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
 
 - All RUN, CMD and ENTRYPOINT commands have 2 forms (Shall & Executable):
 - **Shell Form:** \<Instruction> \<command>
@@ -60,6 +60,32 @@ docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter r
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
 
+- Shell Form:
+```bash
+ENTRYPOINT command param1 param2
+ENTRYPOINT echo "Hello World"
+```
+- Executable Form:
+```bash
+ENTRYPOINT ["executable","param1","param2",...]
+ENTRYPOINT ["/bin/echo", "Hello World"]
+```
+> Executable form of ENTRYPOINT allows you to set commands and parameters and then use either form of CMD to set addtional parameters that are more likely to be changed
+
+- Dockerfile:
+```bash
+FROM alpine
+ENTRYPOINT ["/bin/echo", "Hello"]
+CMD ["World"]
+```
+
+### Dockerfile:
+```bash
+FROM alpine
+RUN apk add python
+CMD ["8.8.8.8"]
+ENTRYPOINT [ "ping", "-t", "5" ] 
+```
 
 ## COPY & ADD Directives:
 
