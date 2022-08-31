@@ -16,13 +16,14 @@
 RUN commands always executes in a new layer and creates a new image layer. It is often used for installing software packages and applications.
 - Shell Form:
 ```bash
-\<instruction> \<command>
+<instruction> <command>
 RUN apt-get -y update
-``
+```
 - Exectuable Form:
 ```bash
-\<instruction> ["executable","param1","param2",...]
+<instruction> ["executable","param1","param2",...]
 RUN ["apt-get", "install", "apache2"]
+```
 - Dockerfile:
 ```bash    
 FROM ubuntu
