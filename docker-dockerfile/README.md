@@ -38,18 +38,24 @@ RUN apk add --froce httpd
 CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
 
 - Shell Form:
+```bash
     CMD command param1 param2
     CMD echo "Hello World"
+```
 - Exectuable Form:
+```bash
     CMD ["executable","param1","param2",...]
     CMD ["/bin/echo", "Hello World"]
+```
 - Dockerfile:
+```bash
     FROM alpine
     CMD echo "Hello World"
-  
+```
+```bash
   docker run it image will print Hello World
   docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter run instead
-
+```
 ## ENTRYPOINT
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
