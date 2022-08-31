@@ -5,7 +5,7 @@
 - The image is usually built by executing **Docker instructions**, which added **layers** on top of existing image.
 - The final docker image can be considered as a layered structure where there is a core or a base image and on top of that, there are several layered intermediate images.
 
-Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
+### Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
 
 - All RUN, CMD and ENTRYPOINT commands have 2 forms (Shall & Executable):
 - **Shell Form:** \<Instruction> \<command>
