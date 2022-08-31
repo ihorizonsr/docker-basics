@@ -8,7 +8,7 @@
 Let's start with the uses of the commands **RUN**, **CMD** and **ENTRYPOINT** in Dockerfile:
 
 - All RUN, CMD and ENTRYPOINT commands have 2 forms (Shall & Executable):
-- Shell Form - <Instruction> <command>
+- Shell Form - \<Instruction> <command>
 - Executable Form - <instruction>["executable","param1","param2",...]
 
 ## RUN:
