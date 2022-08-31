@@ -30,9 +30,10 @@ docker run -d -e "USER=test1" --name web-nginx nginx
 ```bash
 docker run --name ihz-nginx -d -p 8080:80 nginx
 ```
-> ***docker run***: The command first creates a writeable container layer over the specified image[nginx], and then starts it using the specified command.
 > ***-d***: Docker container runs in the background of the terminal.
+
 > ***-p***: Expose port 80 [internally accessable] to host or outside with 8080 [exterally accessable]
+
 > ***--name***: Assign a name to the container
 
 ### Show history of an image
