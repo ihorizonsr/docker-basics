@@ -39,22 +39,22 @@ CMD commands allows to set default command and/or parameter. This will be execut
 
 - Shell Form:
 ```bash
-    CMD command param1 param2
-    CMD echo "Hello World"
+CMD command param1 param2
+CMD echo "Hello World"
 ```
 - Exectuable Form:
 ```bash
-    CMD ["executable","param1","param2",...]
-    CMD ["/bin/echo", "Hello World"]
+CMD ["executable","param1","param2",...]
+CMD ["/bin/echo", "Hello World"]
 ```
 - Dockerfile:
 ```bash
-    FROM alpine
-    CMD echo "Hello World"
+FROM alpine
+CMD echo "Hello World"
 ```
 ```bash
-  docker run it image will print Hello World
-  docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter run instead
+docker run it image will print Hello World
+docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter run instead
 ```
 ## ENTRYPOINT
 
