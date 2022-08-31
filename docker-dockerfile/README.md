@@ -15,21 +15,23 @@
 
 RUN commands always executes in a new layer and creates a new image layer. It is often used for installing software packages and applications.
 - Shell Form:
-    
-    \<instruction> \<command>
-    RUN apt-get -y update
+```bash
+\<instruction> \<command>
+RUN apt-get -y update
+``
 - Exectuable Form:
-
-    \<instruction> ["executable","param1","param2",...]
-    RUN ["apt-get", "install", "apache2"]
+```bash
+\<instruction> ["executable","param1","param2",...]
+RUN ["apt-get", "install", "apache2"]
 - Dockerfile:
-    
-    FROM ubuntu
-    RUN apt-get -y update && apt-get install apache2
-      
-    FROM alpine
-    RUN apk add --froce httpd
-
+```bash    
+FROM ubuntu
+RUN apt-get -y update && apt-get install apache2
+```
+```bash
+FROM alpine
+RUN apk add --froce httpd
+```
 ## CMD:
 
 CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
