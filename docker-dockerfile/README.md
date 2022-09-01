@@ -172,8 +172,20 @@ docker inspect nginx-container
 ```bash
 docker run -t -d -P --name nginx-container1 -v nginx-vol:/usr/share/nginx/html nginx:latest
 ```
+#### Stop and Remove Containers
+```bash
+docker container ls -a
+docker container stop nginx-container & nginx-container1
+docker container rm nginx-container & nginx-container1
+docker container ls -a
+```
+#### Create and Run new container with same Volume mount
+```bash
+docker run -t -d -P --name nginx1 -v nginx-vol:/usr/share/nginx/html nginx:latest
+```
+> Open browser and enter IP:PORT and Verify Nginx Site with modified index page.
 
-### Mount Host directory to container
+### Mount Host directory into the container
 
 ```bash
 docker run -d --name test -v <Source Path>:<Destination Path> nginx:latest
