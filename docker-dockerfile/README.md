@@ -152,7 +152,7 @@ docker volume create nginx-vol
 ```
 #### Mount the volume to container
 ```bash
-docker run -t -d -P --name nginx-container -v nginx-vol:/usr/share/nginx/html nginx:latest
+docker run -t -d -P --name vol-container1 -v nginx-vol:/usr/share/nginx/html nginx:latest
 ```
 #### Find container exposed port
 ```bash
@@ -160,39 +160,44 @@ docker container ls
 ```
 > Open browser and enter IP:PORT and Verify Nginx Site up and running
 ```bash
-docker cp index.html nginx-container:/usr/share/nginx/html
+docker cp index.html vol-container1:/usr/share/nginx/html
 ```
 > Open browser and enter IP:PORT and Verify Nginx Site with modified index page.
 ```
-docker inspect nginx-container
+docker inspect vol-container1
 ```
 > Verify the Mount details
   
 #### Share volume between containers
 ```bash
-docker run -t -d -P --name nginx-container1 -v nginx-vol:/usr/share/nginx/html nginx:latest
+docker run -t -d -P --name vol-container2 -v nginx-vol:/usr/share/nginx/html nginx:latest
 ```
 #### Stop and Remove Containers
 ```bash
 docker container ls -a
-docker container stop nginx-container & nginx-container1
-docker container rm nginx-container & nginx-container1
+docker container stop vol-container1 & vol-container2
+docker container rm vol-container1 & vol-container2
 docker container ls -a
 ```
 #### Create and Run new container with same Volume mount
 ```bash
-docker run -t -d -P --name nginx1 -v nginx-vol:/usr/share/nginx/html nginx:latest
+docker run -t -d -P --name vol-container -v nginx-vol:/usr/share/nginx/html nginx:latest
 ```
 > Open browser and enter IP:PORT and Verify Nginx Site with modified index page.
 
 ### Mount Host directory into the container
 
 ```bash
-docker run -d --name test -v <Source Path>:<Destination Path> nginx:latest
+docker run -d --name dir-container -v <Source Path>:<Destination Path> nginx:latest
 ```
 ```bash
-docker run -d --name test -v D:\data:/app nginx:latest
+docker run -d --name dir-container -v D:\data:/app nginx:latest
 ```
+```bash
+docker exec -it dir-container /bin/bash
+```
+> Verify the mount path /app
+
 > Volume Location - Windows Explorer: \\\wsl$\docker-desktop-data\data\docker\volumes
 
 ## Docker Document Reference:
