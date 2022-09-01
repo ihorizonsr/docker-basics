@@ -168,17 +168,16 @@ docker inspect nginx-container
 ```
 > Verify the Mount details
   
-#### Create Shared Volume and share between containers
+#### Share volume between containers
 ```bash
-docker volume create shared-vol
+docker run -t -d -P --name nginx-container1 -v nginx-vol:/usr/share/nginx/html nginx:latest
 ```
 
-
+### Mount Host directory to container
 
 ```bash
 docker run -d --name test -v <Source Path>:<Destination Path> nginx:latest
 ```
-example:
 ```bash
 docker run -d --name test -v D:\data:/app nginx:latest
 ```
