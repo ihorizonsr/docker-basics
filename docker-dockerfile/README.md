@@ -27,12 +27,28 @@ RUN ["apt-get", "install", "apache2"]
 #### Dockerfile:
 ```bash    
 FROM ubuntu
-RUN apt-get -y update && apt-get install apache2
+RUN apt-get -y update
+RUN apt-get install apache2 -y
 ```
 ```bash
-FROM alpine
-RUN apk add --froce httpd
+docker build . -t ubuntu:run-v1
 ```
+```bash
+docker image ls
+```
+```bash
+docker run -d --name run-cont1 ubuntu:run-v1
+```
+```bash
+docker run -d --name run-cont2 ubuntu:run-v1
+```
+```bash
+docker run -t -d --name run-cont3 ubuntu:run-v1
+```
+```bash
+docker container ls -a
+```
+  
 ## CMD:
 
 CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
@@ -49,13 +65,26 @@ CMD ["/bin/echo", "Hello World"]
 ```
 #### Dockerfile:
 ```bash
-FROM alpine
-CMD echo "Hello World"
+FROM ubuntu:trusty
+
+CMD ping localhost
 ```
 ```bash
-docker run it image will print Hello World
-docker run -it image /bin/bash or sh CMD is ignored and bash/shell interpreter run instead
+docker build . -t cmd-ping
 ```
+```bash
+docker image ls
+```
+```bash
+docker run -t cmd-ping
+```
+```bash
+docker run cmd-ping hostname
+```
+```bash
+docker container ls -a
+```
+
 ## ENTRYPOINT
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
@@ -86,6 +115,44 @@ RUN apk add python
 CMD ["8.8.8.8"]
 ENTRYPOINT [ "ping", "-t", "5" ] 
 ```
+```bash
+docker build . -t epoint-ping
+```
+```bash
+docker image ls
+```
+```bash
+docker run -t epoint-ping
+```
+```bash
+docker run epoint-ping 4.4.4.4
+```
+```bash
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y apache2-utils && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD ["ab"]
+
+docker run ab
+docker run ab http://bencane.com/
+```
+
+  
+
+```bash
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y apache2-utils && \
+    rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["ab"]
+
+docker run ab http://bencane.com/
+```
 > **Please Note:** If there is no **ENTRYPOINT** or **CMD** specified in the Docker image, it starts and exits at the same time that means container stops automatically. It is essential to specify **ENTRYPOINT** or **CMD** so that when you will start the container, it should execute something rather than just start and stop the container.
 
 ## COPY & ADD Directives:
@@ -107,6 +174,19 @@ We can specify multiple source paths and we need to use a relative path while sp
 FROM httpd:2.4
 COPY . /usr/local/apache2/htdocs/
 ```
+```bash
+docker build . -t apache:copy-v1
+```
+```bash
+docker image ls
+```
+```bash
+docker run -t -d -P --name copy-cont apache:copy-v1
+```
+```bash
+docker container ls
+```
+> Open Browser and Enter IP:PORT and verify the site
 
 ## **ADD Directive:**
 
@@ -125,6 +205,20 @@ ADD <source> <destination>
 FROM httpd:2.4
 ADD website.tar.gz /usr/local/apache2/htdocs/
 ```
+```bash
+docker build . -t apache:add-v1
+```
+```bash
+docker image ls
+```
+```bash
+docker run -t -d -P --name add-cont apache:add-v1
+```
+```bash
+docker container ls
+```
+> Open Browser and Enter IP:PORT and verify the site
+
 
 #### When to use **ADD** or **COPY**: 
 > According to the Dockerfile best practices guide, we should always prefer COPY over ADD unless we specifically need one of the two additional features of ADD. As noted above, using ADD command automatically expands tar files and specific compressed formats, which can lead to unexpected files being written to the file system in our images.
