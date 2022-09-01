@@ -158,15 +158,16 @@ docker run -t -d -P --name nginx-container -v nginx-vol:/usr/share/nginx/html ng
 ```bash
 docker container ls
 ```
-> Open browser and enter IP:PORT
+> Open browser and enter IP:PORT and Verify Nginx Site up and running
 ```bash
 docker cp index.html nginx-container:/usr/share/nginx/html
 ```
-> Open browser and enter IP:PORT
+> Open browser and enter IP:PORT and Verify Nginx Site with modified index page.
 ```
-docker inspect test
+docker inspect nginx-container
 ```
-
+> Verify the Mount details
+  
 #### Create Shared Volume and share between containers
 ```bash
 docker volume create shared-vol
