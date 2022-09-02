@@ -27,13 +27,16 @@ COPY . /usr/local/apache2/htdocs/
 ```
 > **docker build -t \<username>/\<repo-name>:\<tagname>**
 ```bash
-docker build -t ihorizons/ra-nginx:v1
+docker build -t ihorizons/ra-apache:v1
 ```
 ```bash
-docker run ihorizons/ra-nginx:v1 #Test the build image
+docker run -d -P --name ra-apache ihorizons/ra-apache:v1 #Test the build image
 ```
 ```bash
-docker push ihorizons/ra-nginx:v1
+docker push ihorizons/ra-apache:v1
+docker image rm ihorizons/ra-apache:v1
+docker pull ihorizons/ra-apache:v1
+docker run -d -P --name ra-apache ihorizons/ra-apache:v1
 ```
 
 2. Few other alternates for Docker Registry are: 
