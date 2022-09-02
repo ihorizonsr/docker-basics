@@ -48,7 +48,8 @@ docker run -t -d --name run-cont3 ubuntu:run-v1
 ```bash
 docker container ls -a
 ```
-  
+> **Please Note:** If there is no **ENTRYPOINT** or **CMD** specified in the Docker image, it starts and exits at the same time that means container stops automatically. It is essential to specify **ENTRYPOINT** or **CMD** so that when you will start the container, it should execute something rather than just start and stop the container.
+
 ## CMD:
 
 CMD commands allows to set default command and/or parameter. This will be executed if you run a particular container without specifying some command, which can be overwritten from command line when docker container runs. 
@@ -73,18 +74,11 @@ CMD ping localhost
 docker build . -t cmd-ping
 ```
 ```bash
-docker image ls
-```
-```bash
 docker run -t cmd-ping
 ```
 ```bash
 docker run cmd-ping hostname
 ```
-```bash
-docker container ls -a
-```
-
 ## ENTRYPOINT
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
@@ -112,8 +106,8 @@ CMD ["World"]
 ```bash
 FROM alpine
 RUN apk add python
-CMD ["8.8.8.8"]
 ENTRYPOINT [ "ping", "-t", "5" ] 
+CMD ["8.8.8.8"]
 ```
 ```bash
 docker build . -t epoint-ping
@@ -153,7 +147,7 @@ ENTRYPOINT ["ab"]
 
 docker run ab http://bencane.com/
 ```
-> **Please Note:** If there is no **ENTRYPOINT** or **CMD** specified in the Docker image, it starts and exits at the same time that means container stops automatically. It is essential to specify **ENTRYPOINT** or **CMD** so that when you will start the container, it should execute something rather than just start and stop the container.
+
 
 ## COPY & ADD Directives:
 
