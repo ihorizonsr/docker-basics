@@ -105,18 +105,18 @@ CMD ["World"]
 #### Dockerfile:
 ```bash
 FROM alpine
-RUN apk add python
-ENTRYPOINT [ "ping", "-t", "5" ] 
-CMD ["8.8.8.8"]
+
+RUN apk add --force python
+
+CMD ["www.google.com"]
+
+ENTRYPOINT [ "ping","-c", "5", "-s", "1000"]
 ```
 ```bash
 docker build . -t epoint-ping
 ```
 ```bash
-docker image ls
-```
-```bash
-docker run -t epoint-ping
+docker run epoint-ping
 ```
 ```bash
 docker run epoint-ping 4.4.4.4
@@ -133,8 +133,6 @@ CMD ["ab"]
 docker run ab
 docker run ab http://bencane.com/
 ```
-
-  
 
 ```bash
 FROM ubuntu:latest
