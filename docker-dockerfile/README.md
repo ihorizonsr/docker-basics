@@ -72,13 +72,26 @@ CMD ping localhost
 ```
 ```bash
 docker build . -t cmd-ping
-```
-```bash
-docker run -t cmd-ping
-```
-```bash
+docker run cmd-ping
 docker run cmd-ping hostname
 ```
+
+```bash
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y apache2-utils && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD ["ab"]
+
+docker image build . -t cmd-ab
+docker run cmd-ab
+docker run cmd-ab ab http://bencane.com/
+docker run entry-ab ab -n 100 -c 10 http://bencane.com/
+docker run cmd-ab echo "Hello World"
+```
+
 ## ENTRYPOINT
 
 ENTRYPOINT command is similar to CMD, however it configures a container that will run as an executable form.  If you want to run a container with the condition that a particular command is always executed, use ENTRYPOINT.
@@ -128,24 +141,12 @@ RUN apt-get update && \
     apt-get install -y apache2-utils && \
     rm -rf /var/lib/apt/lists/*
 
-CMD ["ab"]
-
-docker run ab
-docker run ab http://bencane.com/
-```
-
-```bash
-FROM ubuntu:latest
-
-RUN apt-get update && \
-    apt-get install -y apache2-utils && \
-    rm -rf /var/lib/apt/lists/*
-
 ENTRYPOINT ["ab"]
 
 docker run ab http://bencane.com/
+docker run entry-ab -n 100 -c 10 http://bencane.com/
+docker run entry-ab echo "Hello World"
 ```
-
 
 ## COPY & ADD Directives:
 
