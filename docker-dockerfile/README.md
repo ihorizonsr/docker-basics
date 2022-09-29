@@ -43,9 +43,6 @@ docker run -d --name run-cont1 ubuntu:run-v1
 docker run -d --name run-cont2 ubuntu:run-v1
 ```
 ```bash
-docker run -t -d --name run-cont3 ubuntu:run-v1
-```
-```bash
 docker container ls -a
 ```
 > **Please Note:** If there is no **ENTRYPOINT** or **CMD** specified in the Docker image, it starts and exits at the same time that means container stops automatically. It is essential to specify **ENTRYPOINT** or **CMD** so that when you will start the container, it should execute something rather than just start and stop the container.
