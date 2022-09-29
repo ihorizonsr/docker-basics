@@ -139,6 +139,7 @@ RUN apt-get update && \
 
 ENTRYPOINT ["ab"]
 
+docker build . -t epoint-ab
 docker run ab http://bencane.com/
 docker run entry-ab -n 100 -c 10 http://bencane.com/
 docker run entry-ab echo "Hello World"
