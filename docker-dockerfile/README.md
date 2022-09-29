@@ -85,7 +85,6 @@ CMD ["ab"]
 docker image build . -t cmd-ab
 docker run cmd-ab
 docker run cmd-ab ab http://bencane.com/
-docker run entry-ab ab -n 100 -c 10 http://bencane.com/
 docker run cmd-ab echo "Hello World"
 ```
 
